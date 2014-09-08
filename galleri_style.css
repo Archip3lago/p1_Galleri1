@@ -1,0 +1,8 @@
+div{
+    float: left;
+    width: 200px;
+    height: 140px;
+    border: 2px solid black;
+    border-radius: 5px;
+    
+}
