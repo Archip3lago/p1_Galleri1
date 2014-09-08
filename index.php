@@ -8,7 +8,7 @@
     <body>
         <?php
             foreach(glob("*.jpg") as $filename){
-                echo '<div>'."<img alt='$filename' src='$filename'>";
+                echo '<div>'."<a href='#'><img title='$filename' src='$filename'></a>";
                 $tmp = strlen($filename) - 4;
                 echo '<p>'.substr($filename, 0, $tmp).'</p>'.'</div>';
             }
