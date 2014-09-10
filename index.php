@@ -7,10 +7,10 @@
     </head>
     <body>
         <?php
-            foreach(glob("*.jpg") as $filename){
-                echo '<div>'."<a href='#'><img title='$filename' src='$filename'></a>";
-                $tmp = strlen($filename) - 4;
-                echo '<p>'.substr($filename, 0, $tmp).'</p>'.'</div>';
+            foreach(glob("thumbnail/*.jpg") as $filename){
+                $tmp = strlen($filename) - 14;
+                echo '<div>'."<a href='#'><img title='$tmp' src='$filename'></a>";
+                echo '<p>'.substr($filename, 10, $tmp).'</p>'.'</div>';
             }
         ?>
     </body>
