@@ -9,7 +9,8 @@
         <?php
             foreach(glob("thumbnail/*.jpg") as $filename){
                 $tmp = strlen($filename) - 14;
-                echo '<div>'."<a href='#'><img title='$tmp' src='$filename'></a>";
+                $filename_img = "img/".substr($filename, 10, $tmp + 4);
+                echo '<div>'."<a href='$filename_img'><img title='$tmp' src='$filename'></a>";
                 echo '<p>'.substr($filename, 10, $tmp).'</p>'.'</div>';
             }
         ?>
